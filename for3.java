@@ -1,0 +1,19 @@
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 10 and 99 are:");
+        for (int i = 10; i <= 99; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    public static boolean isPrime(int num) {
+        if (num <= 1)
+            return false;
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+}
